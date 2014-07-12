@@ -181,8 +181,7 @@
 {
     [super viewDidLoad];
 	
-//	_urlTextField.text = @"http://";
-	_urlTextField.text = @"http://npp.gsfc.nasa.gov/images/VIIRS_4Jan2012.jpg";
+	_urlTextField.text = @"http://";
 	_resultLabel.text = @"Ready.";
 	_progressView.progress = 0.0;
 	
