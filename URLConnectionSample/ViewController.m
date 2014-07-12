@@ -106,6 +106,14 @@
 	};
 	_error = [NSError errorWithDomain:NSURLErrorDomain code:NSURLErrorCancelled userInfo:info];
 	_done = YES;
+	[NSThread exit];
+}
+
+- (void)endDownload:(NSError *)error
+{
+	_error = error;
+	_done = YES;
+	[NSThread exit];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
@@ -139,19 +147,16 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-	if (!_progressHandler(1.0)) {
+	if (_progressHandler(1.0)) {
+		[self endDownload:nil];
+	} else {
 		[self cancelDownload];
-		return;
 	}
-
-	_error = nil;
-	_done = YES;
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-	_error = error;
-	_done = YES;
+	[self endDownload:error];
 }
 
 @end
@@ -176,7 +181,8 @@
 {
     [super viewDidLoad];
 	
-	_urlTextField.text = @"http://";
+//	_urlTextField.text = @"http://";
+	_urlTextField.text = @"http://npp.gsfc.nasa.gov/images/VIIRS_4Jan2012.jpg";
 	_resultLabel.text = @"Ready.";
 	_progressView.progress = 0.0;
 	
