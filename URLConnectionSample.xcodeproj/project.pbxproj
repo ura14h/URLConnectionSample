@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		31AB1F7219710BB400ED86B0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 31AB1F7019710BB400ED86B0 /* LICENSE */; };
-		31AB1F7319710BB400ED86B0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 31AB1F7119710BB400ED86B0 /* README.md */; };
+		312CB3D31971146900F288FF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 312CB3D11971146900F288FF /* LICENSE */; };
+		312CB3D41971146900F288FF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 312CB3D21971146900F288FF /* README.md */; };
 		31EA57141970C09D00277EB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31EA57131970C09D00277EB9 /* Foundation.framework */; };
 		31EA57161970C09D00277EB9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31EA57151970C09D00277EB9 /* CoreGraphics.framework */; };
 		31EA57181970C09D00277EB9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31EA57171970C09D00277EB9 /* UIKit.framework */; };
@@ -21,8 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		31AB1F7019710BB400ED86B0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		31AB1F7119710BB400ED86B0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		312CB3D11971146900F288FF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		312CB3D21971146900F288FF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 		31EA57101970C09D00277EB9 /* URLConnectionSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLConnectionSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31EA57131970C09D00277EB9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		31EA57151970C09D00277EB9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -99,8 +99,8 @@
 		31EA571A1970C09D00277EB9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				31AB1F7119710BB400ED86B0 /* README.md */,
-				31AB1F7019710BB400ED86B0 /* LICENSE */,
+				312CB3D21971146900F288FF /* README.md */,
+				312CB3D11971146900F288FF /* LICENSE */,
 				31EA571B1970C09D00277EB9 /* URLConnectionSample-Info.plist */,
 				31EA571C1970C09D00277EB9 /* InfoPlist.strings */,
 				31EA571F1970C09D00277EB9 /* main.m */,
@@ -163,8 +163,8 @@
 			files = (
 				31EA572C1970C09D00277EB9 /* Images.xcassets in Resources */,
 				31EA571E1970C09D00277EB9 /* InfoPlist.strings in Resources */,
-				31AB1F7319710BB400ED86B0 /* README.md in Resources */,
-				31AB1F7219710BB400ED86B0 /* LICENSE in Resources */,
+				312CB3D41971146900F288FF /* README.md in Resources */,
+				312CB3D31971146900F288FF /* LICENSE in Resources */,
 				31EA57271970C09D00277EB9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
