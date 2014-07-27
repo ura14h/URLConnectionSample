@@ -26,7 +26,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iU-i4-Cti">
-                                <rect key="frame" x="106" y="128" width="108" height="30"/>
+                                <rect key="frame" x="106" y="115" width="108" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Download Sync">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -36,13 +36,23 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdI-N6-Un0">
-                                <rect key="frame" x="98" y="186" width="116" height="30"/>
+                                <rect key="frame" x="102" y="153" width="116" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Download Async">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="downloadAsync:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YIh-Bl-IZo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBO-w5-lrE">
+                                <rect key="frame" x="112" y="191" width="96" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Upload Async">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadAsync:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DNj-T2-hb1"/>
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ygt-pz-PaO">
@@ -57,13 +67,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgg-sd-RFn">
-                                <rect key="frame" x="137" y="224" width="48" height="30"/>
+                                <rect key="frame" x="137" y="229" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancelDownloadAsync:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kB7-xi-SPC"/>
+                                    <action selector="cancel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4LU-NG-fDD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -71,19 +81,21 @@
                         <constraints>
                             <constraint firstItem="nIX-QQ-Zfn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="24i-SJ-Bhj"/>
                             <constraint firstAttribute="trailing" secondItem="ygt-pz-PaO" secondAttribute="trailing" constant="20" id="2OY-eG-kdx"/>
+                            <constraint firstItem="OdI-N6-Un0" firstAttribute="top" secondItem="4iU-i4-Cti" secondAttribute="bottom" constant="8" id="2cL-hF-JGv"/>
                             <constraint firstAttribute="trailing" secondItem="Iyc-Er-Hiu" secondAttribute="trailing" constant="20" id="7cB-qg-g2Z"/>
-                            <constraint firstItem="kgg-sd-RFn" firstAttribute="top" secondItem="OdI-N6-Un0" secondAttribute="bottom" constant="8" id="8Mz-SL-Wgp"/>
                             <constraint firstItem="ygt-pz-PaO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="9ra-BD-wi7"/>
-                            <constraint firstItem="4iU-i4-Cti" firstAttribute="top" secondItem="nIX-QQ-Zfn" secondAttribute="bottom" constant="38" id="BIc-MM-SaP"/>
+                            <constraint firstItem="4iU-i4-Cti" firstAttribute="top" secondItem="nIX-QQ-Zfn" secondAttribute="bottom" constant="25" id="BIc-MM-SaP"/>
+                            <constraint firstAttribute="centerX" secondItem="OdI-N6-Un0" secondAttribute="centerX" id="Fs7-VN-caO"/>
                             <constraint firstItem="Iyc-Er-Hiu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="PBr-Tf-ojE"/>
                             <constraint firstAttribute="centerX" secondItem="kgg-sd-RFn" secondAttribute="centerX" constant="-1" id="PXa-im-JNz"/>
+                            <constraint firstAttribute="centerX" secondItem="SBO-w5-lrE" secondAttribute="centerX" id="QUn-XY-Vgj"/>
+                            <constraint firstItem="SBO-w5-lrE" firstAttribute="top" secondItem="OdI-N6-Un0" secondAttribute="bottom" constant="8" id="RYY-lh-jn5"/>
                             <constraint firstAttribute="centerX" secondItem="4iU-i4-Cti" secondAttribute="centerX" id="RlM-ic-FcU"/>
-                            <constraint firstItem="ygt-pz-PaO" firstAttribute="top" secondItem="kgg-sd-RFn" secondAttribute="bottom" constant="29" id="S9L-0l-wci"/>
+                            <constraint firstItem="ygt-pz-PaO" firstAttribute="top" secondItem="kgg-sd-RFn" secondAttribute="bottom" constant="24" id="S9L-0l-wci"/>
+                            <constraint firstItem="kgg-sd-RFn" firstAttribute="top" secondItem="SBO-w5-lrE" secondAttribute="bottom" constant="8" id="Y7z-c8-x0G"/>
                             <constraint firstItem="Iyc-Er-Hiu" firstAttribute="top" secondItem="ygt-pz-PaO" secondAttribute="bottom" constant="38" id="YRB-YL-bYT"/>
-                            <constraint firstAttribute="centerX" secondItem="OdI-N6-Un0" secondAttribute="centerX" constant="4" id="al8-em-Xsa"/>
                             <constraint firstItem="nIX-QQ-Zfn" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="40" id="kxa-51-WPS"/>
                             <constraint firstAttribute="trailing" secondItem="nIX-QQ-Zfn" secondAttribute="trailing" constant="20" id="uBO-l2-K9c"/>
-                            <constraint firstItem="OdI-N6-Un0" firstAttribute="top" secondItem="4iU-i4-Cti" secondAttribute="bottom" constant="28" id="wFY-7u-ur1"/>
                         </constraints>
                     </view>
                     <connections>
