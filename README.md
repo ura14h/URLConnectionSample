@@ -11,7 +11,8 @@ Sample code of the how to use:
 URLConnection *connection = [[URLConnection alloc] init];
 NSHTTPURLResponse *response = nil;
 NSError *error = nil;
-NSData *result = [connection sendSynchronousRequestWithProgressReport:request returningResponse:&response error:&error uploadProgressHandler:^BOOL(float progress) {
+NSData *result = [connection sendSynchronousRequestWithProgressReport:request returningResponse:&response error:&error
+	uploadProgressHandler:^BOOL(float progress) {
 		return YES;
 	}
 	downloadProgressHandler:^BOOL(float progress) {
