@@ -112,6 +112,7 @@
 {
 	[_connection cancel];
 	
+	_result = nil;
 	NSDictionary *info = @{
 		NSLocalizedDescriptionKey: @"Request is canceled by user action.",
 		NSURLErrorFailingURLErrorKey: _request.URL,
